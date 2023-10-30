@@ -1,15 +1,15 @@
 # MxTOP
-Sample codes to reproduce the analysis results and figures.
+Sample codes to reproduce the figures and create regions.
 
-Requirements
+## Requirements
 R (at least v4.0.3)
 Bioconductor (v3.12)
 
-Getting Started
-These codes demonstrate how to reproduce most findings from Skardziute et al. paper. There are three Rmd files in the code directory. prep_data.Rmd is used to prepare main data matrix (gene level). Analysis.Rmd and AnalysisSup.Rmd shows basic principles of data acquisition. Note that example files contain only two samples and data from a single chromosome. Full data sets were deposited to NCBI GEO (GSE185551).
+## Getting Started
+These codes demonstrate how to reproduce most findings from Skardziute et al. paper. There are multiple R files in the code directory that correspond to individual figures.
 
-Input data
-The main input is the coverage matrix, which represents target coverages matrix. Data is read in as an RDS file, but it is possible to change this to any other common table format. Besides the coverage matrix, there are several other input files describing different genomic features - see example files for the exact format.
+## Input data for regions
+For regions creation, the main input is the coverage matrix, which represents target coverages matrix and density matrix. Data is read in as an RDS and bw files, but it is possible to change this to any other common table format. 
 
-Final figures
+## Input data for final figures
 Codes and data to generate figures from the article are present. There are individual files for each main figure and one file for all supplemental figures. Figures not generated with R are not included.
