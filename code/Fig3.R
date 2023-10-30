@@ -2,6 +2,7 @@ library(pacman)
 p_load(data.table, dplyr, ggplot2, RColorBrewer, viridis, ggthemes, stringr, ggpubr, 
 ComplexHeatmap, colorRamp2, ggseqlogo, scales, ggrastr, GenomicRanges, ggrepel, circlize)
 options(scipen=999)
+source("code/common.R")
 
 # A
 readRDS("input/Fig3_A.RDS") %>% 

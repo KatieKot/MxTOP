@@ -1,8 +1,8 @@
 library(pacman)
 p_load(data.table, dplyr, ggplot2, RColorBrewer, viridis, ggthemes, stringr, ggpubr, ComplexHeatmap, 
-  colorRamp2, ggseqlogo, scales, ggrastr, GenomicRanges, ggrepel, ggvenn, circlize)
+  colorRamp2, ggseqlogo, scales, ggrastr, GenomicRanges, ggrepel, ggvenn, circlize, ggvenn)
 options(scipen=999)
-
+source("code/common.R")
 # A
 cols_posterGroups4  <- c("GC_only"="lightskyblue", 
                         "uCGhmC_minus"="plum3", 

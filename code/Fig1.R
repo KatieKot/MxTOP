@@ -2,12 +2,13 @@ library(pacman)
 p_load(data.table, dplyr, ggplot2, RColorBrewer, viridis, ggthemes, stringr, ggpubr, ComplexHeatmap, 
   colorRamp2, ggseqlogo, scales, ggrastr, GenomicRanges, ggrepel)
 options(scipen=999)
+source("code/common.R")
 
 # C
-readRDS("input/Fig1_C.RDS") %>% 
-  ggplot(aes(x="", y=value, fill=variable)) +
+d <- readRDS("input/Fig1_C.RDS") 
+ggplot(d, aes(x="", y=value, fill=variable)) +
     geom_bar(stat="identity", width=1, colour="black") +
-    geom_text(data=subset(d_targets, value>0.9), 
+    geom_text(data=subset(d, value>0.9), 
                     aes(y=value-0.5, label=paste0(round(value, 4)*100, "%")),
                     arrow = arrow(length = unit(0.015, "npc")),
                     segment.linetype = 1,
@@ -36,8 +37,8 @@ readRDS("input/Fig1_D.RDS") %>%
   ggplot(aes(strand, Fraction, fill=sample)) + 
       geom_point(aes(fill=sample),  colour="black", shape=21, size=1.5, position = position_dodge2(width = 0.5)) +
       facet_wrap(~fragment+CG_NR) +
-      theme_bw() +
+      theme_Publication() +
       ylab("5hmC/5uCG, log") +
       ylim(c(-5.5, 5)) +
       scale_fill_brewer(palette = "RdPu", direction=1) +
-      theme_Publication() 
+      theme_bw()
