@@ -1,5 +1,7 @@
-# MxTOP
-Sample codes to reproduce the figures and create regions.
+# One-pot trimodal mapping of unmethylated, hydroxymethylated and open chromatin sites unveils distinctive 5hmC roles at dynamic chromatin loci  
+Kotryna Skardžiūtė, Kotryna Kvederavičiūtė, Inga Pečiulienė, Milda Narmontė, Povilas Gibas, Janina Ličytė, Saulius Klimašauskas, Edita Kriukienė
+
+Sample codes to reproduce the analysis results.
 
 ## Requirements
 R (at least v4.0.3)
